@@ -1,0 +1,14 @@
+input{
+    width: 100%;
+}
+
+label{
+    font-size: $font-size;
+}
+
+button{
+    width: 100%;
+    color: white;
+    background-color: $colorPrimary;
+    font-size: $font-size;
+}
