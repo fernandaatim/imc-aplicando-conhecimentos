@@ -24,21 +24,43 @@ function calcularIMC(altura,peso){
 function resultadoIMC(imc){
     resultadoFinal = ''
 
-    if (imc < 18.5) {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Abaixo do peso`;
-    } else if (imc >= 18.5 && imc < 24.9) {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Peso normal`;
-    } else if (imc >= 25 && imc < 29.9) {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Sobrepeso`;
-    } else if (imc >= 30 && imc < 34.9) {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 1`;
-    } else if (imc >= 35 && imc < 39.9) {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 2`;
-    } else {
-        resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 3`;
-    }
+    resultadoFinal = 
+    imc < 18.5 ? `IMC: ${imc.toFixed(2)} - Abaixo do peso` :
+    imc < 24.9 ? `IMC: ${imc.toFixed(2)} - Peso normal` :
+    imc < 29.9 ? `IMC: ${imc.toFixed(2)} - Sobrepeso` :
+    imc < 34.9 ? `IMC: ${imc.toFixed(2)} - Obesidade grau 1` :
+    imc < 39.9 ? `IMC: ${imc.toFixed(2)} - Obesidade grau 2` :
+    `IMC: ${imc.toFixed(2)} - Obesidade grau 3`;
 
     resultado.innerHTML += `<p>${resultadoFinal}</p>`
 }
 
 form.addEventListener('submit',processarDados)
+
+
+
+
+
+//if else padrão:
+// if (imc < 18.5) {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Abaixo do peso`;
+// } else if (imc >= 18.5 && imc < 24.9) {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Peso normal`;
+// } else if (imc >= 25 && imc < 29.9) {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Sobrepeso`;
+// } else if (imc >= 30 && imc < 34.9) {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 1`;
+// } else if (imc >= 35 && imc < 39.9) {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 2`;
+// } else {
+//     resultadoFinal = `IMC: ${imc.toFixed(2)} - Obesidade grau 3`;
+// }
+
+// //ternário 
+// resultadoFinal = 
+//     imc < 18.5 ? `IMC: ${imc.toFixed(2)} - Abaixo do peso` :
+//     imc < 24.9 ? `IMC: ${imc.toFixed(2)} - Peso normal` :
+//     imc < 29.9 ? `IMC: ${imc.toFixed(2)} - Sobrepeso` :
+//     imc < 34.9 ? `IMC: ${imc.toFixed(2)} - Obesidade grau 1` :
+//     imc < 39.9 ? `IMC: ${imc.toFixed(2)} - Obesidade grau 2` :
+//     `IMC: ${imc.toFixed(2)} - Obesidade grau 3`;
