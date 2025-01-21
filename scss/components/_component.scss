@@ -1,14 +1,46 @@
+@use '../variable';
+
+
 input{
     width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 0.5rem;
 }
 
 label{
-    font-size: $font-size;
+    font-size: variable.$font-size;
 }
 
 button{
     width: 100%;
+    padding: 10px;
     color: white;
-    background-color: $colorPrimary;
-    font-size: $font-size;
+    background-color: variable.$colorPrimary;
+    font-size: variable.$font-size;
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+    outline: none;
+    margin-top: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ol{
+    padding: 2rem;
+    font-size: variable.$font-size;
+    width: 100%;
+}
+
+.form{
+    width: 100%;
+}
+
+span{
+    padding: 0.5rem;
+    font-size: variable.$font-size;
 }

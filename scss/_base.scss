@@ -1,9 +1,15 @@
+@use 'variable';
+
 *{
     margin:0;
     padding: 0;
 }
 
 body{
-    font-family: $font-family;
-    background-color: $colorPrimary;
+    font-family: variable.$font-family;
+    background-color: variable.$colorPrimary;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }

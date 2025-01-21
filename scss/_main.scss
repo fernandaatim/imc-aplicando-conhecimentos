@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'base';
-@import 'container';
-@import 'grid';
-@import 'component';
+@use 'variable';
+@use 'base';
+@use 'components/container';
+@use 'components/grid';
+@use 'components/component';
